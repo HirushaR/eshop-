@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 
 // my owa imports
 import 'package:eshop/componets/horizontalListView.dart';
+import 'package:eshop/componets/Products.dart';
 
 void main(){
   runApp(
@@ -128,6 +129,16 @@ class _HomePageState extends State<HomePage> {
           ),
           //horizontal list view
           HorizontalList(),
+          new Padding(padding: const EdgeInsets.all(8.0),
+            child: new Text('Recent Products'),
+          ),
+
+          //grid view
+          Container(
+            height: 320.0,
+
+          )
+
         ],
       ),
     );
