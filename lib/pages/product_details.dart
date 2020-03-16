@@ -63,7 +63,21 @@ class _ProductDetailsState extends State<ProductDetails> {
             children: <Widget>[
               Expanded(
                   child: MaterialButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      showDialog(context: context,
+                      builder: (context){
+                        return new AlertDialog(
+                          title: new Text("Size"),
+                          content: new Text("Choose the size"),
+                          actions: <Widget>[
+                            new MaterialButton(onPressed: (){
+                              Navigator.of(context).pop(context);
+                            },
+                            child: new Text("close"),)
+                          ],
+                        );
+                      });
+                    },
                     color: Colors.white,
                     textColor: Colors.grey,
                     child: Row(
@@ -80,7 +94,21 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               Expanded(
                   child: MaterialButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      showDialog(context: context,
+                          builder: (context){
+                            return new AlertDialog(
+                              title: new Text("Color"),
+                              content: new Text("Choose the Color"),
+                              actions: <Widget>[
+                                new MaterialButton(onPressed: (){
+                                  Navigator.of(context).pop(context);
+                                },
+                                  child: new Text("close"),)
+                              ],
+                            );
+                          });
+                    },
                     color: Colors.white,
                     textColor: Colors.grey,
                     child: Row(
@@ -97,7 +125,21 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
               Expanded(
                   child: MaterialButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      showDialog(context: context,
+                          builder: (context){
+                            return new AlertDialog(
+                              title: new Text("Quintity"),
+                              content: new Text("Choose the Quintity"),
+                              actions: <Widget>[
+                                new MaterialButton(onPressed: (){
+                                  Navigator.of(context).pop(context);
+                                },
+                                  child: new Text("close"),)
+                              ],
+                            );
+                          });
+                    },
                     color: Colors.white,
                     textColor: Colors.grey,
                     child: Row(
@@ -136,7 +178,48 @@ class _ProductDetailsState extends State<ProductDetails> {
                 onPressed: (){},
               ),
             ],
-          )
+          ),
+          Divider(),
+          new ListTile(
+            title: new Text("Product details"),
+            subtitle: new Text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"),
+          ),
+          Divider(),
+
+          //= ===========================  need product brand ,condition
+          new Row(
+            children: <Widget>[
+              Padding(
+                  padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: new Text("Product Name :", style: TextStyle(color: Colors.grey),),
+              ),
+              Padding(padding: EdgeInsets.all(5.0),
+              child: new Text(widget.product_details_name),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: new Text("Product Brand :", style: TextStyle(color: Colors.grey),),
+              ),
+              Padding(padding: EdgeInsets.all(5.0),
+                child: new Text("Zony"),
+              ),
+            ],
+          ),
+          new Row(
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: new Text("Product Condition :", style: TextStyle(color: Colors.grey),),
+              ),
+              Padding(padding: EdgeInsets.all(5.0),
+                child: new Text("Exellent"),
+              ),
+            ],
+          ),
         ],
       ),
     );
