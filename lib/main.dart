@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter/widgets.dart';
+
+// my owa imports
+import 'package:eshop/componets/horizontalListView.dart';
 
 void main(){
   runApp(
@@ -117,7 +121,13 @@ class _HomePageState extends State<HomePage> {
       ),
       body: new ListView(
         children: <Widget>[
-          image_carousel
+          //image slides
+          image_carousel,
+          new Padding(padding: const EdgeInsets.all(8.0),
+          child: new Text('Categories'),
+          ),
+          //horizontal list view
+          HorizontalList(),
         ],
       ),
     );
