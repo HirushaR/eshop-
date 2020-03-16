@@ -47,7 +47,6 @@ flutter:
   #  - images/a_dot_ham.jpeg
   assets:
     - images/c1.jpg
-    - images/m1.jpeg
     - images/w3.jpeg
     - images/w4.jpeg
     - images/m2.jpg
