@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:eshop/pages/product_details.dart';
 
 class Product extends StatefulWidget {
   @override
@@ -55,7 +56,11 @@ class Single_prod extends StatelessWidget {
       child: Hero(tag: product_name,
           child: Material(
             child: InkWell(
-              onTap: (){},
+              onTap: ()=>Navigator.of(context).push(
+                new MaterialPageRoute(
+                    builder: (context)=>new ProductDetails(),
+                )
+              ),
               child: GridTile(
                   footer: Container(
                     color: Colors.white70,
