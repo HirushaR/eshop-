@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
           //grid view
           Container(
             height: 320.0,
-
+            child: Product(),
           )
 
         ],

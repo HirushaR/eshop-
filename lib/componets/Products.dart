@@ -11,18 +11,29 @@ class _ProductState extends State<Product> {
       "name":'Blazer',
       "picture":'images/products/blazer1.jpeg',
       "old_price":'120',
-      "price":'85',
+      "price":'rs.85',
     },
     {
       "name":'Women Blazer',
       "picture":'images/products/blazer2.jpeg',
       "old_price":'200',
-      "price":'160',
+      "price":'rs.160',
     },
   ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+      itemCount: product_list.length,
+        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (BuildContext context, int index ){
+        return Single_prod(
+          product_name: product_list[index]['name'],
+          product_picture: product_list[index]['picture'],
+          product_old_price: product_list[index]['old_price'],
+          product_price: product_list[index]['price'],
+        );
+      }
+    );
   }
 }
 
@@ -40,7 +51,45 @@ class Single_prod extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card(
+      child: Hero(tag: product_name,
+          child: Material(
+            child: InkWell(
+              onTap: (){},
+              child: GridTile(
+                  footer: Container(
+                    color: Colors.white70,
+                    child: ListTile(
+                      leading: Text(
+                        product_name,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold
+                        ),
+                      ),
+                      title: Text(
+                        "Rs."+product_price,
+                        style: TextStyle(
+                            color: Colors.redAccent,
+                            fontWeight: FontWeight.w800
+                        ),
+                      ),
+                      subtitle: Text(
+                        "Rs."+product_old_price,
+                          style: TextStyle(
+                              color: Colors.black54,
+                              fontWeight: FontWeight.w800,
+                          decoration: TextDecoration.lineThrough),
+
+                      ),
+
+                    ),
+                  ),
+                  child: Image.asset(product_picture, fit: BoxFit.cover,)
+              ),
+            ),
+          )
+      ),
+    );
   }
 }
 
