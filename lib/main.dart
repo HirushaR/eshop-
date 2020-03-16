@@ -29,11 +29,11 @@ class _HomePageState extends State<HomePage> {
     child: new Carousel(
       boxFit: BoxFit.cover,
       images: [
-        AssetImage('images/c1.jpg'),
-        AssetImage('images/m1.jpeg'),
-        AssetImage('images/m2.jpg'),
-        AssetImage('images/w3.jpeg'),
-        AssetImage('images/w4.jpeg'),
+        AssetImage('images/zony.jpg'),
+        AssetImage('images/zony1.jpg'),
+        AssetImage('images/phone.jpg'),
+        AssetImage('images/phd.jpg'),
+        AssetImage('images/mouse.jpg'),
       ],
       autoplay: false,
 //      animationCurve: Curves.fastOutSlowIn,

@@ -8,16 +8,16 @@ class Product extends StatefulWidget {
 class _ProductState extends State<Product> {
   var product_list = [
     {
-      "name":'Blazer',
-      "picture":'images/products/blazer1.jpeg',
-      "old_price":'120',
-      "price":'rs.85',
+      "name":'Mouse',
+      "picture":'images/products/lmouse.jpg',
+      "old_price":'1800',
+      "price":'1500',
     },
     {
-      "name":'Women Blazer',
-      "picture":'images/products/blazer2.jpeg',
-      "old_price":'200',
-      "price":'rs.160',
+      "name":'Head Phone',
+      "picture":'images/products/sony.jpg',
+      "old_price":'7600',
+      "price":'5800',
     },
   ];
   @override
