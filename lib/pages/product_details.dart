@@ -8,6 +8,15 @@ class ProductDetails extends StatefulWidget {
 class _ProductDetailsState extends State<ProductDetails> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.red,
+        title: Text('E shop'),
+        actions: <Widget>[
+          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null),
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: null)
+        ],
+      ),
+    );
   }
 }
