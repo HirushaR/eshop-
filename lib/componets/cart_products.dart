@@ -30,7 +30,7 @@ class _Cart_ProductsState extends State<Cart_Products> {
       "price":'2600',
       "size":"M",
       "color":"red",
-      "quantity":1
+      "quantity":3
     },
 
 
@@ -82,16 +82,16 @@ class Single_cart_product extends StatelessWidget {
               new Row(
                 children: <Widget>[
                   //============= this section for size ===========
-                 Padding(padding: const EdgeInsets.all(2.0),
+                 Padding(padding: const EdgeInsets.all(0.0),
                  child: new Text("Size:"),
                  ),
-                  Padding(padding: const EdgeInsets.all(8.0),
+                  Padding(padding: const EdgeInsets.all(4.0),
                     child: new Text(cart_product_size , style: TextStyle(color: Colors.red),),
                   ),
                   //============= this section for color ===========
-                  new Padding(padding: const EdgeInsets.fromLTRB(20.0, 8.0, 8.0, 8.0),
+                  new Padding(padding: const EdgeInsets.fromLTRB(10.0, 8.0, 8.0, 8.0),
                   child: new Text("Color:"),),
-                  Padding(padding: const EdgeInsets.all(2.0),
+                  Padding(padding: const EdgeInsets.all(4.0),
                     child: new Text(cart_product_color, style: TextStyle(color: Colors.red),),
                   ),
 
@@ -105,17 +105,22 @@ class Single_cart_product extends StatelessWidget {
                     fontSize: 17.0,
                   fontWeight: FontWeight.bold
                 ),
-
               ),
             ),
           ],
         ),
-        trailing: new Column(
-          children: <Widget>[
-            new IconButton(icon: Icon(Icons.arrow_drop_up), onPressed: (){}),
-            //new IconButton(icon: Icon(Icons.arrow_drop_up), onPressed: (){}),
+        trailing:
+        FittedBox(
+          fit: BoxFit.fill,
+          child:
+          Column(
+            children: <Widget>[
+              IconButton(icon: Icon(Icons.arrow_drop_up,color: Colors.red),iconSize: 38, onPressed: () {}),
+              Text("$cart_product_quantity",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+              IconButton(icon: Icon(Icons.arrow_drop_down,color: Colors.red,),iconSize: 38, onPressed: () {}),
 
-          ],
+            ],
+          ),
         ),
       ),
     );
