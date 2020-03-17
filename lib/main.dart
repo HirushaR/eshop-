@@ -6,6 +6,7 @@ import 'package:flutter/widgets.dart';
 // my owa imports
 import 'package:eshop/componets/horizontalListView.dart';
 import 'package:eshop/componets/Products.dart';
+import 'package:eshop/pages/cart.dart';
 
 void main(){
   runApp(
@@ -49,7 +50,11 @@ class _HomePageState extends State<HomePage> {
         title: Text('E shop'),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: null)
+          new IconButton(
+              icon: Icon(
+                Icons.shopping_cart, color: Colors.white),
+              onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>new Cart()));
+              }),
         ],
       ),
       drawer: new Drawer(
@@ -68,7 +73,7 @@ class _HomePageState extends State<HomePage> {
             ),
             //body
             InkWell(
-              onTap: (){},
+              onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>new HomePage()));},
               child: ListTile(
                 title: Text('Home Page'),
                 leading: Icon(Icons.home,color: Colors.red),

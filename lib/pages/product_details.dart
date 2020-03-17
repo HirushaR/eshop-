@@ -215,6 +215,7 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+
           new Row(
             children: <Widget>[
               Padding(
@@ -225,6 +226,10 @@ class _ProductDetailsState extends State<ProductDetails> {
                 child: new Text("Exellent"),
               ),
             ],
+          ),
+          Divider(),
+          Padding(padding: EdgeInsets.all(8.0),
+            child: new Text("Similar products"),
           ),
           new Container(
             height: 360.0,
