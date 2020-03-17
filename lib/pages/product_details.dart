@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:eshop/main.dart';
+import 'package:eshop/componets/Products.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_details_name;
@@ -32,7 +33,6 @@ class _ProductDetailsState extends State<ProductDetails> {
         ),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: null)
         ],
       ),
       body: new ListView(
@@ -226,8 +226,63 @@ class _ProductDetailsState extends State<ProductDetails> {
               ),
             ],
           ),
+          new Container(
+            height: 360.0,
+            child: Similar_products(),
+          ),
         ],
       ),
     );
   }
 }
+
+class Similar_products extends StatefulWidget {
+  @override
+  _Similar_productsState createState() => _Similar_productsState();
+}
+
+class _Similar_productsState extends State<Similar_products> {
+  var product_list = [
+    {
+      "name":'Mouse',
+      "picture":'images/products/lmouse.jpg',
+      "old_price":'1800',
+      "price":'1500',
+    },
+    {
+      "name":'Head Phone',
+      "picture":'images/products/sony.jpg',
+      "old_price":'7600',
+      "price":'5800',
+    },
+    {
+      "name":'Samsung A10S',
+      "picture":'images/products/A10s.jpg',
+      "old_price":'28000',
+      "price":'2600',
+    },
+    {
+      "name":'Dell i5',
+      "picture":'images/products/5593.jpg',
+      "old_price":'160000',
+      "price":'14300',
+    },
+
+  ];
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+        itemCount: product_list.length,
+        gridDelegate: new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (BuildContext context, int index ){
+          return Single_prod(
+            product_name: product_list[index]['name'],
+            product_picture: product_list[index]['picture'],
+            product_old_price: product_list[index]['old_price'],
+            product_price: product_list[index]['price'],
+          );
+        }
+    );
+  }
+}
+
