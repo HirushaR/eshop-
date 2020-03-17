@@ -20,6 +20,36 @@ class _ProductState extends State<Product> {
       "old_price":'7600',
       "price":'5800',
     },
+    {
+      "name":'Samsung A10S',
+      "picture":'images/products/A10s.jpg',
+      "old_price":'28000',
+      "price":'2600',
+    },
+    {
+      "name":'Dell i5',
+      "picture":'images/products/5593.jpg',
+      "old_price":'160000',
+      "price":'14300',
+    },
+    {
+      "name":'tenson 2TB',
+      "picture":'images/products/hard.jpg',
+      "old_price":'18000',
+      "price":'15500',
+    },
+    {
+      "name":'Nova 5t',
+      "picture":'images/products/nova5t.jpg',
+      "old_price":'73000',
+      "price":'63000',
+    },
+    {
+      "name":'staterpack',
+      "picture":'images/products/thingerbits.jpeg',
+      "old_price":'8000',
+      "price":'5900',
+    },
   ];
   @override
   Widget build(BuildContext context) {

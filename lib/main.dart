@@ -35,11 +35,12 @@ class _HomePageState extends State<HomePage> {
         AssetImage('images/phd.jpg'),
         AssetImage('images/mouse.jpg'),
       ],
-      autoplay: true,
+      autoplay: false,
       animationCurve: Curves.fastOutSlowIn,
       animationDuration: Duration(milliseconds: 1000),
       dotSize: 4.0,
       indicatorBgPadding: 10.0,
+      dotBgColor: Colors.transparent,
     ),
   );
     return Scaffold(

@@ -60,13 +60,13 @@ flutter:
     - images/cats/shoe.png
     - images/products/lmouse.jpg
     - images/products/sony.jpg
-    - images/products/dress1.jpeg
-    - images/products/dress2.jpeg
-    - images/products/hills1.jpeg
-    - images/products/hills2.jpeg
-    - images/products/pants2.jpeg
-    - images/products/skt1.jpeg
-    - images/products/skt2.jpeg
+    - images/products/5593.jpg
+    - images/products/A10s.jpg
+    - images/products/g5.webp
+    - images/products/hard.jpg
+    - images/products/nova5t.jpg
+    - images/products/thingerbits.jpeg
+
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

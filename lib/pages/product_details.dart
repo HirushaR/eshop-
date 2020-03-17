@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:eshop/main.dart';
 
 class ProductDetails extends StatefulWidget {
   final product_details_name;
@@ -23,7 +24,12 @@ class _ProductDetailsState extends State<ProductDetails> {
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.red,
-        title: Text('E shop'),
+        title: InkWell(
+          onTap: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>new HomePage()));
+          },
+            child: Text('E shop'),
+        ),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: null),
           new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: null)
