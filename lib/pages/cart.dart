@@ -23,6 +23,26 @@ class _CartState extends State<Cart> {
         ],
       ),
 
+      bottomNavigationBar: new Container(
+        color: Colors.white,
+        child: Row(
+          children: <Widget>[
+            Expanded(
+                child: ListTile(
+                  title: new Text("Total:"),
+                  subtitle: new Text("Rs.230"),
+                ),
+            ),
+            Expanded(
+                child: new MaterialButton(onPressed: (){},
+                child: new Text("Check out", style: TextStyle(color: Colors.white)),
+                  color: Colors.red,
+                ),
+            ),
+          ],
+        ),
+      ),
+
     );
   }
 }
